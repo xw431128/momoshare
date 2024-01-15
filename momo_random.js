@@ -1,7 +1,7 @@
 /**
  * 墨墨背单词share_random
  */
- const $ = new Env("墨墨背单词share_random");
+ const $ = new Env("墨墨分享");
  const notify = $.isNode() ? require('./sendNotify') : '';
  const Notify = 1; //0为关闭通知，1为打开通知,默认为1
  const debug = 1; //0为关闭调试，1为打开调试,默认为0
@@ -105,7 +105,7 @@ async function MM() {
              try {
                  data = JSON.parse(data)
                  $.log(`\n【网抑云时间】: ${data.content}  by--${data.music}`);
-                 msg += `\n【网抑云时间】: ${data.content}  by--${data.music}`;
+                 // msg += `\n【网抑云时间】: ${data.content}  by--${data.music}`;
              } catch (e) {
                  $.logErr(e, resp);
              } finally {
