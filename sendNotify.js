@@ -21,7 +21,8 @@ let QQ_MODE = 'send';
 
 // =======================================Bark App通知设置区域===========================================
 //此处填你BarkAPP的信息(IP/设备码，例如：https://api.day.app/XXXXXXXX)
-let BARK_PUSH = '';
+let BARK_PUSH = 'https://api.day.app/i725yfVYY9j7to4eRB4NKL/墨墨分享/GitHub Actions Run Completed !
+';
 //BARK app推送铃声,铃声列表去APP查看复制填写
 let BARK_SOUND = '';
 
