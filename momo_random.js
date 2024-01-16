@@ -85,7 +85,7 @@ async function MM() {
 				data = JSON.parse(data);
                 let _ip = data.ip;
                 console.log(`【请求的 ip 】：${_ip}`);
-                msg += `请求：${_ip}`
+                msg += `请求地址：${_ip}`
 			} catch (e) {
 				$.logErr(e, resp);
 			} finally {
@@ -105,7 +105,7 @@ async function MM() {
              try {
                  data = JSON.parse(data)
                  $.log(`\n【网抑云时间】: ${data.content}  by--${data.music}`);
-                 msg += `\n网抑云：${data.content}`;
+                 msg += `\n网抑云说：${data.content}`;
              } catch (e) {
                  $.logErr(e, resp);
              } finally {
@@ -137,7 +137,7 @@ async function MM() {
                 let sum = data.match(/(?<=增加了)(.+?)(?=个单词)/)[0];
                 let namedata = data.match(/(?<=alt=")\S*(?="\/)/)[0];
                 console.log(`【 用  户 】：${namedata} 加了 ${sum} 个单词上限`);
-                msg += `\n用户：${namedata}\n奖励：${sum}`
+                msg += `\n用户名称：${namedata}\n奖励数量：${sum}`
 		// msg += `\n用户${namedata}完成了一次分享`
 			} catch (e) {
 				$.logErr(e, resp);
