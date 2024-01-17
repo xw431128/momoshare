@@ -105,7 +105,7 @@ async function MM() {
              try {
                  data = JSON.parse(data)
                  $.log(`\n【网抑云时间】: ${data.content}  by--${data.music}`);
-                 msg += `\n网抑云说：${data.content}`;
+                 // msg += `\n网抑云说：${data.content}`;
              } catch (e) {
                  $.logErr(e, resp);
              } finally {
