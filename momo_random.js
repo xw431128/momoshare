@@ -137,7 +137,11 @@ async function MM() {
                 let sum = data.match(/(?<=增加了)(.+?)(?=个单词)/)[0];
                 let namedata = data.match(/(?<=alt=")\S*(?="\/)/)[0];
                 console.log(`【 用  户 】：${namedata} 加了 ${sum} 个单词上限`);
-                msg += `\n用户名称：${namedata}\n奖励数量：${sum}`
+                msg += `\n用户名称：${namedata}\n奖励数量：${sum}\n运行时间：${new Date(
+                 new Date().getTime() +
+                 new Date().getTimezoneOffset() * 60 * 1000 +
+                 8 * 60 * 60 * 1000
+             ).toLocaleString()}`
 		// msg += `\n用户${namedata}完成了一次分享`
 			} catch (e) {
 				$.logErr(e, resp);
