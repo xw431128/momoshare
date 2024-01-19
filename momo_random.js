@@ -9,7 +9,7 @@
  let msg = '';
  let UA = '';
  let runTime = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000).toLocaleString();
- let hour = new Date().getHours();
+ let hour = new Date().getHours() + 8;
 
  !(async () => {
  
@@ -30,10 +30,10 @@
              await $.wait(2 * 1000);
          await wyy();
          await $.wait(2 * 1000); 
-         let hour = new Date().getHours();
-        // if (hour%4 != 0){
+         // let hour = new Date().getHours();
+         if (hour%4 == 0){
             await SendMsg(msg);
-        //  }
+         }
      }
  })()
      .catch((e) => $.logErr(e))
