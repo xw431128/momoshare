@@ -9,6 +9,7 @@
  let msg = '';
  let UA = '';
  let runTime = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000).toLocaleString();
+ let hour = new Date().getHours();
 
  !(async () => {
  
